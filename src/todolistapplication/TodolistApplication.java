@@ -15,13 +15,9 @@ import todolistapplication.domain.TodoList;
  * @author antti
  */
 public class TodolistApplication extends Application {
-
-    /**
-     * @param args the command line arguments
-     */
     
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         BorderPane root = new BorderPane();
         
         TodoList todolist = new TodoList();
