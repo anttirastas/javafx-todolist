@@ -90,5 +90,27 @@ public class TodoList {
     public List<Category> getCategories() {
         return this.categoryList;
     }
+    
+    public void addTaskToCategory(Task task, Category category) {
+        if (this.taskList.contains(task) 
+                && this.categoryList.contains(category)) {
+            for (int i = 0; i < this.categoryList.size(); i++) {
+                if (this.categoryList.get(i).equals(category)) {
+                    this.categoryList.get(i).addTaskInCategory(task);
+                }
+            }
+        }
+    }
+    
+    public void removeTaskFromCategory(Task task, Category category) {
+        if (this.taskList.contains(task) 
+                && this.categoryList.contains(category)) {
+            for (int i = 0; i < this.categoryList.size(); i++) {
+                if (this.categoryList.get(i).equals(category)) {
+                    this.categoryList.get(i).removeTaskFromCategory(task);
+                }
+            }
+        }
+    }
    
 }
