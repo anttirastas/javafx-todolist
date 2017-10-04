@@ -14,10 +14,12 @@ import java.util.Objects;
 public class Task {
     private String name;
     private boolean done;
+    private Category category;
     
-    public Task(String name) {
+    public Task(String name, Category category) {
         this.name = name;
         this.done = false;
+        this.category = category;
     }
 
     public String getName() {
@@ -34,6 +36,10 @@ public class Task {
     
     public void markAsUndone() {
         this.done = false;
+    }
+    
+    public void changeCategory(Category newCategory) {
+        this.category = newCategory;
     }
 
     @Override
